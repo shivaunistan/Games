@@ -9,10 +9,11 @@ losses = 0
 def game(wins, losses, count):
 	print "Choose your weapon! Please type Rock, Paper, Scissors, Lizard or Spock"
 	player_choice = raw_input().lower()
-	game_options = [rock, paper, scissors, lizard, spock]
+	game_options = ['rock', 'paper', 'scissors', 'lizard', 'spock']
 	while player_choice not in game_options:
 		print "Look buddy - I don't have time for this. You gotta pick one of the options! Try again!"
 		player_choice = raw_input().lower()
+	
 	computer_choice = randint(0,4)
 	print "Great - here we go!"
 	time.sleep(.75)
@@ -153,10 +154,10 @@ def yes_or_no(input_value, count, wins, losses):
 	yes_no_responses = ['yes', 'no']
 	while input_value not in yes_no_responses:
 		if input_value.startswith(('y', 'n')):
-			print 'You need to type out "yes" or "no", otherwise\
-			I don\'t know what to do with you'
-	#print 'You gotta type "yes" or "no" derpsauce'
-	input_value = raw_input().lower()
+			print 'You need to type out "yes" or "no", otherwise I don\'t know what to do with you'
+		else: 
+			print 'I don\'t know what that means - talk to me in computerdummyspeak. You gotta type "yes" or "no"'
+		input_value = raw_input().lower()
 	if input_value == "yes":
 		game(wins, losses, count)
 	elif input_value == 'no' and count >= 1:
@@ -177,11 +178,11 @@ if __name__ == '__main__':
 	#yes_or_no(raw_input().lower(), round_counter, wins, losses)
 	#yes_or_no(player_input, round_counter, wins, losses)
 	#player_input = raw_input()
-	#if player_input:
-	#	game(wins, losses)
-	#else:  
-	#	print "FINE, THEN! I DIDN'T WANT TO SHOW YOU MY COOL PROGRAM ANYWAY! GOOD DAY!"      
-	#	exit()
+	if player_input:
+		game(wins, losses, 0)
+	else:  
+		print "FINE, THEN! I DIDN'T WANT TO SHOW YOU MY COOL PROGRAM ANYWAY! GOOD DAY!"      
+		exit()
 
 #need to add alternate versions of yes and no ("Yes, Y, y, YES, okay, OK, ok, Okay, OKAY" and "No, NO, N, n, NO")
 #need to add an error message for not understood input
