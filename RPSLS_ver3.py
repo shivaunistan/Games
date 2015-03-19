@@ -175,13 +175,13 @@ if __name__ == '__main__':
 	player_input = player_input.lower()
 	#print "Hi there! Would you like to play Rock Paper Scissors Lizard Spock?"
 	#yes_or_no(raw_input().lower(), round_counter, wins, losses)
-	yes_or_no(player_input, round_counter, wins, losses)
-	player_input = raw_input()
-	if player_input:
-		game(wins, losses)
-	else:  
-		print "FINE, THEN! I DIDN'T WANT TO SHOW YOU MY COOL PROGRAM ANYWAY! GOOD DAY!"      
-		exit()
+	#yes_or_no(player_input, round_counter, wins, losses)
+	#player_input = raw_input()
+	#if player_input:
+	#	game(wins, losses)
+	#else:  
+	#	print "FINE, THEN! I DIDN'T WANT TO SHOW YOU MY COOL PROGRAM ANYWAY! GOOD DAY!"      
+	#	exit()
 
 #need to add alternate versions of yes and no ("Yes, Y, y, YES, okay, OK, ok, Okay, OKAY" and "No, NO, N, n, NO")
 #need to add an error message for not understood input
