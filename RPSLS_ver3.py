@@ -151,12 +151,12 @@ def yes_or_no(input_value, count, wins, losses):
 		if input_value.startswith(('y', 'n')):
 			print 'You need to type out "yes" or "no", otherwise\
 			I don\'t know what to do with you'
-		print 'I don\'t know what that means - talk to me in computerdummyspeak. You gotta type "yes" or "no"'
+		#print 'I don\'t know what that means - talk to me in computerdummyspeak. You gotta type "yes" or "no"'
 		input_value = raw_input().lower()
 	if input_value == "yes":
 		game(wins, losses, count)
 	elif input_value == 'no' and count >= 1:
-		print "Well now how will I ever understand humanity? Goodbye."        
+		print "Alas - how will I ever understand humanity? Goodbye."        
 		exit()
 	else:
 		print "FINE, THEN! I DIDN'T WANT TO SHOW YOU MY COOL PROGRAM ANYWAY! GOOD DAY!"
