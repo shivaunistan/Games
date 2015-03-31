@@ -149,8 +149,7 @@ def yes_or_no(input_value, count, wins, losses):
 	yes_no_responses = ['yes', 'no']
 	while input_value not in yes_no_responses:
 		if input_value.startswith(('y', 'n')):
-			print 'You need to type out "yes" or "no", otherwise\
-			I don\'t know what to do with you'
+			print 'You need to type out "yes" or "no", I am but a simple program who only does what my mom said I could do.'
 		#print 'I don\'t know what that means - talk to me in computerdummyspeak. You gotta type "yes" or "no"'
 		input_value = raw_input().lower()
 	if input_value == "yes":
@@ -176,4 +175,8 @@ if __name__ == '__main__':
 		print "FINE, THEN! I DIDN'T WANT TO SHOW YOU MY COOL PROGRAM ANYWAY! GOOD DAY!"      
 		exit()
 
+###Current issues:
+#At "That was fun! Do you want to play again?" system does not recognize garbage text that is entered or just hitting enter
+#At "Hi there! Would you like to play Rock Paper Scissors Lizard Spock?" system does not recognize garbage text that is entered	or just hitting enter
+#unit test, maybe?
 
